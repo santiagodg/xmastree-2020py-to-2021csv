@@ -52,7 +52,7 @@ the animation based on 2021's coordinates.
 ### old_coords_range.py
 
 The script `old_coords_range.py` reads the `coords.txt` file and prints out the minimum and maximum value
-for each of the coordinate dimensions. This values were then used to generate the `coords_2021.txt` file
+for each of the coordinate dimensions. These values were then used to generate the `coords_2021.txt` file
 with its values scaled to 2020's dimension range so that old animations work as expected.
 
 ```
