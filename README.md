@@ -30,6 +30,18 @@ This generates two new files:
 instead of sending them to a microcontroller.
 * `xmaslisghts-spin.csv`: The output CSV animation file.
 
+## How does it work?
+
+1. It takes the specified python script and modifies it so that it prints values instead of
+   passing them to the microcontroller and finishes looping on a set `frames_amount`
+   instead of running forever.
+2. It saves this modified script as a new one.
+3. It runs the modified script using 2021's coordinates and saves the output to a new csv file.
+
+This project does not hijack the original script output target to the Raspberry Pi. It just changes
+the line where the Neopixel object is initialized, so that it instead initializes a Pixels object
+whose `show()` method prints the values it contains. The Pixels class can be found in `xmastree_2020py_to_2021csv.py`.
+
 ## Other tools
 
 ### 2021_coords_to_2020.py
